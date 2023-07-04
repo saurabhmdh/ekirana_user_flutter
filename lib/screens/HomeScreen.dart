@@ -30,6 +30,7 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 16,right: 16, top: 8),
                       child: TextField(
                         cursorColor: Colors.black,
+                        textAlign: TextAlign.left,
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
@@ -111,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/others_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Others",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Others",style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
@@ -160,7 +161,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/sanitary_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Sanitary",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Sanitary",style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ),
@@ -168,14 +169,14 @@ class HomeScreen extends StatelessWidget {
                   Container(
                     width: 154,
                     height: 100,
+                    padding: EdgeInsets.only(left: 8, right: 8),
                     child: const Card(
                       elevation: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/cosmetics_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
-                          Text("Cosmetics",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.bold ), textAlign: TextAlign.center,),
                         ],
                       ),
                     ),
