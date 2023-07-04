@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+class HomeScreen extends StatefulWidget{
+  @override
+  _HomeScreen createState() => _HomeScreen();
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+}
+class _HomeScreen extends State<HomeScreen> {
+  int current_index=0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 100,
           flexibleSpace: Container(
-            color: Colors.green,
+            color: Colors.green.shade800,
             child: Column(
               children: [
                 Column(
@@ -186,6 +190,41 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.green.shade800,
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          currentIndex: current_index,
+          iconSize: 30,
+          items: const[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined,color: Colors.white,),
+              label: "",
+              activeIcon: Icon(Icons.home_outlined,color: Colors.orange)
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag_outlined,color: Colors.white,),
+              label: "",
+              activeIcon: Icon(Icons.shopping_bag_outlined,color: Colors.orange),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.checklist_outlined,color: Colors.white,),
+              label: "",
+              activeIcon: Icon(Icons.checklist_outlined,color: Colors.orange),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline,color: Colors.white),
+              label: "",
+              activeIcon: Icon(Icons.person_outline,color: Colors.orange),
+            )
+          ],
+          onTap: (index){
+            setState((){
+              current_index=index;
+            });
+          },
+        )
       ),
     );
   }
