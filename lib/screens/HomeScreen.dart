@@ -1,3 +1,4 @@
+import 'package:ekirana_user_flutter/screens/ProductListScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 class HomeScreen extends StatefulWidget{
@@ -77,66 +78,118 @@ class _HomeScreen extends State<HomeScreen> {
               Column(
                 children: [
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child:  const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: Svg('assets/images/grocery_bag_icon.svg'),width: 36,height: 36),
-                          SizedBox(height: 8,),
-                          Text("Grocery",style: TextStyle(fontWeight: FontWeight.w600),),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>
+                            ProductListScreen(
+                                "Essentials & Grocery",
+                                Svg('assets/images/grocery_screen_icon.svg')
+                            ),
+                      )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child:  const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/grocery_bag_icon.svg'),width: 36,height: 36),
+                            SizedBox(height: 8,),
+                            Text("Grocery",style: TextStyle(fontWeight: FontWeight.w600),),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child: const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: Svg('assets/images/garment_icon.svg'),width: 36,height: 36),
-                          SizedBox(height: 8,),
-                          Text("Garments",style: TextStyle(fontWeight: FontWeight.w600),),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
+                                  "Garments",
+                                  Svg('assets/images/garment_icon.svg')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/garment_icon.svg'),width: 36,height: 36),
+                            SizedBox(height: 8,),
+                            Text("Garments",style: TextStyle(fontWeight: FontWeight.w600),),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child: const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: Svg('assets/images/others_icon.svg'),width: 36,height: 36),
-                          SizedBox(height: 8,),
-                          Text("Others",style: TextStyle(fontWeight: FontWeight.w600)),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
+                                  "Others",
+                                  Svg('assets/images/others_icon.svg')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/others_icon.svg'),width: 36,height: 36),
+                            SizedBox(height: 8,),
+                            Text("Others",style: TextStyle(fontWeight: FontWeight.w600)),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child: const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: Svg('assets/images/interior_design_icon.svg'),width: 36,height: 36),
-                          SizedBox(height: 8,),
-                          Text("Interior Design",style: TextStyle(fontWeight: FontWeight.w600),),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
+                                  "Interior Design",
+                                  Svg('assets/images/interior_design_icon.svg')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/interior_design_icon.svg'),width: 36,height: 36),
+                            SizedBox(height: 8,),
+                            Text("Interior Design",style: TextStyle(fontWeight: FontWeight.w600),),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -145,49 +198,88 @@ class _HomeScreen extends State<HomeScreen> {
               Column(
                 children: [
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child: const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: Svg('assets/images/soft_drink_icon.svg'),width: 36,height: 36),
-                          SizedBox(height: 8,),
-                          Text("Soft Drinks",style: TextStyle(fontWeight: FontWeight.w600),),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
+                                  "Soft Drinks",
+                                  Svg('assets/images/soft_drink_icon.svg')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/soft_drink_icon.svg'),width: 36,height: 36),
+                            SizedBox(height: 8,),
+                            Text("Soft Drinks",style: TextStyle(fontWeight: FontWeight.w600),),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child: const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: AssetImage('assets/images/sanitary_icon.png'),width: 34,height: 34,),
-                          SizedBox(height: 8),
-                          Text("Sanitary",style: TextStyle(fontWeight: FontWeight.w600)),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
+                                  "Sanitary",
+                                  AssetImage('assets/images/sanitary_icon.png')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: AssetImage('assets/images/sanitary_icon.png'),width: 34,height: 34,),
+                            SizedBox(height: 8),
+                            Text("Sanitary",style: TextStyle(fontWeight: FontWeight.w600)),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(height: 8,),
-                  Container(
-                    width: 154,
-                    height: 100,
-                    child: const Card(
-                      elevation: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: Svg('assets/images/cosmetics_icon.svg'),width: 34,height: 34),
-                          Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.w600 ), textAlign: TextAlign.center,),
-                        ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
+                                  "Cosmetics",
+                                  Svg('assets/images/cosmetics_icon.svg')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/cosmetics_icon.svg'),width: 34,height: 34),
+                            Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.w600 ), textAlign: TextAlign.center,),
+                          ],
+                        ),
                       ),
                     ),
                   ),
