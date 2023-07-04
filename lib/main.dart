@@ -11,6 +11,7 @@ class EkiranaApp extends StatelessWidget {
 
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
+      debugShowCheckedModeBanner: false,
       initialRoute: "/home",
       routes: {
         '/home': (context) => HomeScreen()

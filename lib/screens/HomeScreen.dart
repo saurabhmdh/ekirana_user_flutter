@@ -16,6 +16,7 @@ class _HomeScreen extends State<HomeScreen> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           toolbarHeight: 100,
           flexibleSpace: Container(
@@ -27,12 +28,13 @@ class _HomeScreen extends State<HomeScreen> {
                     Container(
                       alignment: Alignment.topLeft,
                       padding: const EdgeInsets.only(left: 18,top: 42),
-                      child: Image.asset('assets/images/left_arrow.png')
+                      child: Icon(Icons.arrow_back,color: Colors.white,)
                     ),
                     Container(
                       height: 50,
                       padding: const EdgeInsets.only(left: 16,right: 16, top: 8),
                       child: TextField(
+                        textAlignVertical: TextAlignVertical.center,
                         cursorColor: Colors.black,
                         textAlign: TextAlign.left,
                         decoration: InputDecoration(
@@ -40,24 +42,21 @@ class _HomeScreen extends State<HomeScreen> {
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: const BorderSide(
                                     color: Colors.white,
-                                    width: 1
+                                    width: 2
                                 )
                             ),
                             focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30),
                             borderSide: const BorderSide(
                                 color: Colors.white,
-                                width: 1
+                                width: 2
                             )
                         ),
-                          prefixIcon: Container(
-                            width: 5,
-                            height: 5,
-                            child: Image(image: ResizeImage(AssetImage('assets/images/location_icon.png'),width: 18,height: 18),),
-                          ),
+                          prefixIcon: Icon(Icons.location_on_rounded,color: Colors.black),
                           hintText: "Location",
                           filled: true,
-                          fillColor: Colors.white
+                          fillColor: Colors.white,
+                          contentPadding: EdgeInsets.only(top: 4)
                         ),
                       ),
                     )
@@ -86,7 +85,7 @@ class _HomeScreen extends State<HomeScreen> {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/grocery_bag_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Grocery",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Grocery",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
                     ),
@@ -101,7 +100,7 @@ class _HomeScreen extends State<HomeScreen> {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/garment_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Garments",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Garments",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
                     ),
@@ -116,7 +115,7 @@ class _HomeScreen extends State<HomeScreen> {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/others_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Others",style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text("Others",style: TextStyle(fontWeight: FontWeight.w600)),
                         ],
                       ),
                     ),
@@ -131,7 +130,7 @@ class _HomeScreen extends State<HomeScreen> {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/interior_design_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Interior Design",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Interior Design",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
                     ),
@@ -150,7 +149,7 @@ class _HomeScreen extends State<HomeScreen> {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/soft_drink_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Soft Drinks",style: TextStyle(fontWeight: FontWeight.bold),),
+                          Text("Soft Drinks",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
                     ),
@@ -165,7 +164,7 @@ class _HomeScreen extends State<HomeScreen> {
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/sanitary_icon.png'),width: 36,height: 36)),
                           SizedBox(height: 10,),
-                          Text("Sanitary",style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text("Sanitary",style: TextStyle(fontWeight: FontWeight.w600)),
                         ],
                       ),
                     ),
@@ -180,7 +179,7 @@ class _HomeScreen extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image(image: ResizeImage(AssetImage('assets/images/cosmetics_icon.png'),width: 36,height: 36)),
-                          Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.bold ), textAlign: TextAlign.center,),
+                          Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.w600 ), textAlign: TextAlign.center,),
                         ],
                       ),
                     ),
