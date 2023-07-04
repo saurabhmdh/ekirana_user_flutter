@@ -50,7 +50,8 @@ class _ProductListScreen extends State<ProductListScreen> {
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
                           color: Colors.white
-                        ),),
+                          ),
+                        ),
                       ],
                     )
                   ],
