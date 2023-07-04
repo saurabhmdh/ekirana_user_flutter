@@ -4,13 +4,13 @@ import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 class ProductListScreen extends StatefulWidget{
   String title;
   ImageProvider<Object> icon;
-  ProductListScreen(this.title,this.icon);
+  ProductListScreen(this.title,this.icon, {super.key});
   @override
   _ProductListScreen createState() => _ProductListScreen(title,icon);
 }
 class _ProductListScreen extends State<ProductListScreen> {
 
-  var title;
+  String title;
   ImageProvider<Object> icon;
   _ProductListScreen(this.title,this.icon);
   @override
