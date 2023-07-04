@@ -172,7 +172,6 @@ class _HomeScreen extends State<HomeScreen> {
                   Container(
                     width: 154,
                     height: 100,
-                    padding: EdgeInsets.only(left: 8, right: 8),
                     child: const Card(
                       elevation: 2,
                       child: Column(
