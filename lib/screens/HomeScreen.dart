@@ -70,12 +70,13 @@ class _HomeScreen extends State<HomeScreen> {
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
@@ -91,6 +92,7 @@ class _HomeScreen extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
@@ -106,6 +108,7 @@ class _HomeScreen extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
@@ -121,6 +124,7 @@ class _HomeScreen extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
@@ -140,6 +144,7 @@ class _HomeScreen extends State<HomeScreen> {
               ),
               Column(
                 children: [
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
@@ -155,6 +160,7 @@ class _HomeScreen extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
@@ -170,11 +176,12 @@ class _HomeScreen extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 8,),
                   Container(
                     width: 154,
                     height: 100,
                     child: const Card(
-                      elevation: 3,
+                      elevation: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
