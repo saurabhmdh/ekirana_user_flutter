@@ -66,21 +66,120 @@ class HomeScreen extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           padding: const EdgeInsets.all(8),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 children: [
-                  Image(image: ResizeImage(AssetImage('assets/images/grocery_card.png'),width: 154,height: 100)),
-                  Image(image: ResizeImage(AssetImage('assets/images/garments_card.png'),width: 154,height: 100)),
-                  Image(image: ResizeImage(AssetImage('assets/images/others_card.png'),width: 154,height: 100))
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/grocery_bag_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Grocery",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/garment_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Garments",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/others_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Others",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/interior_design_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Interior Design",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
               Column(
                 children: [
-                  Image(image: ResizeImage(AssetImage('assets/images/soft_drinks_card.png'),width: 154,height: 100)),
-                  Image(image: ResizeImage(AssetImage('assets/images/sanitary_card.png'),width: 154,height: 100)),
-                  Image(image: ResizeImage(AssetImage('assets/images/cosmetics_card.png'),width: 154,height: 100))
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/soft_drink_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Soft Drinks",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/sanitary_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Sanitary",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 154,
+                    height: 100,
+                    child: const Card(
+                      elevation: 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: ResizeImage(AssetImage('assets/images/cosmetics_icon.png'),width: 36,height: 36)),
+                          SizedBox(height: 10,),
+                          Text("Cosmetics",style: TextStyle(fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               )
             ],
