@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 class HomeScreen extends StatefulWidget{
   @override
   _HomeScreen createState() => _HomeScreen();
@@ -12,7 +13,7 @@ class _HomeScreen extends State<HomeScreen> {
       width: double.infinity,
       height: double.infinity,
       decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/app_background.png'),fit: BoxFit.cover)
+          image: DecorationImage(image: Svg("assets/images/app_bg.svg"),fit: BoxFit.cover)
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -52,7 +53,7 @@ class _HomeScreen extends State<HomeScreen> {
                                 width: 2
                             )
                         ),
-                          prefixIcon: Icon(Icons.location_on_rounded,color: Colors.black),
+                          prefixIcon: Image(image: Svg('assets/images/location_icon.svg'),width: 18, height: 18,),
                           hintText: "Location",
                           filled: true,
                           fillColor: Colors.white,
@@ -78,13 +79,13 @@ class _HomeScreen extends State<HomeScreen> {
                   Container(
                     width: 154,
                     height: 100,
-                    child: const Card(
+                    child:  const Card(
                       elevation: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/grocery_bag_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
+                          Image(image: Svg('assets/images/grocery_bag_icon.svg'),width: 36,height: 36),
+                          SizedBox(height: 8,),
                           Text("Grocery",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
@@ -98,8 +99,8 @@ class _HomeScreen extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/garment_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
+                          Image(image: Svg('assets/images/garment_icon.svg'),width: 36,height: 36),
+                          SizedBox(height: 8,),
                           Text("Garments",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
@@ -113,8 +114,8 @@ class _HomeScreen extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/others_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
+                          Image(image: Svg('assets/images/others_icon.svg'),width: 36,height: 36),
+                          SizedBox(height: 8,),
                           Text("Others",style: TextStyle(fontWeight: FontWeight.w600)),
                         ],
                       ),
@@ -128,8 +129,8 @@ class _HomeScreen extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/interior_design_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
+                          Image(image: Svg('assets/images/interior_design_icon.svg'),width: 36,height: 36),
+                          SizedBox(height: 8,),
                           Text("Interior Design",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
@@ -147,8 +148,8 @@ class _HomeScreen extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/soft_drink_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
+                          Image(image: Svg('assets/images/soft_drink_icon.svg'),width: 36,height: 36),
+                          SizedBox(height: 8,),
                           Text("Soft Drinks",style: TextStyle(fontWeight: FontWeight.w600),),
                         ],
                       ),
@@ -162,8 +163,8 @@ class _HomeScreen extends State<HomeScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/sanitary_icon.png'),width: 36,height: 36)),
-                          SizedBox(height: 10,),
+                          Image(image: AssetImage('assets/images/sanitary_icon.png'),width: 34,height: 34,),
+                          SizedBox(height: 8),
                           Text("Sanitary",style: TextStyle(fontWeight: FontWeight.w600)),
                         ],
                       ),
@@ -173,11 +174,11 @@ class _HomeScreen extends State<HomeScreen> {
                     width: 154,
                     height: 100,
                     child: const Card(
-                      elevation: 2,
+                      elevation: 3,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(image: ResizeImage(AssetImage('assets/images/cosmetics_icon.png'),width: 36,height: 36)),
+                          Image(image: Svg('assets/images/cosmetics_icon.svg'),width: 34,height: 34),
                           Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.w600 ), textAlign: TextAlign.center,),
                         ],
                       ),
@@ -194,27 +195,26 @@ class _HomeScreen extends State<HomeScreen> {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           currentIndex: current_index,
-          iconSize: 30,
           items: const[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined,color: Colors.white,),
+              icon: Image(image: Svg("assets/images/home_icon.svg"),width: 25,height: 25,),
               label: "",
-              activeIcon: Icon(Icons.home_outlined,color: Colors.orange)
+              activeIcon: Image(image: Svg("assets/images/home_icon.svg"),width: 25,height: 25,color: Colors.orange,)
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_bag_outlined,color: Colors.white,),
+              icon: Image(image: Svg("assets/images/bag_icon.svg"),width: 25,height: 25,),
               label: "",
-              activeIcon: Icon(Icons.shopping_bag_outlined,color: Colors.orange),
+              activeIcon: Image(image: Svg("assets/images/bag_icon.svg"),width: 25,height: 25,color: Colors.orange,)
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.checklist_outlined,color: Colors.white,),
+              icon: Image(image: Svg("assets/images/list_icon.svg"),width: 25,height: 25,),
               label: "",
-              activeIcon: Icon(Icons.checklist_outlined,color: Colors.orange),
+              activeIcon: Image(image: Svg("assets/images/list_icon.svg"),width: 25,height: 25,color: Colors.orange,)
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline,color: Colors.white),
+              icon: Image(image: Svg("assets/images/account_icon.svg"),width: 25,height: 25,),
               label: "",
-              activeIcon: Icon(Icons.person_outline,color: Colors.orange),
+              activeIcon: Image(image: Svg("assets/images/account_icon.svg"),width: 25,height: 25,color: Colors.orange,)
             )
           ],
           onTap: (index){
