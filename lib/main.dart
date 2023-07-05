@@ -1,3 +1,4 @@
+import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
 import 'package:ekirana_user_flutter/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,9 @@ class EkiranaApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
-      initialRoute: "/home",
+      initialRoute: "/",
       routes: {
+        '/': (context) => BottomNavigationFile(),
         '/home': (context) => HomeScreen()
       }
     );

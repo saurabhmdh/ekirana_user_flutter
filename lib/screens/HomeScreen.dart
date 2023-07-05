@@ -1,4 +1,7 @@
+import 'package:ekirana_user_flutter/screens/OrderHistoryScreen.dart';
 import 'package:ekirana_user_flutter/screens/ProductListScreen.dart';
+import 'package:ekirana_user_flutter/screens/ShoppingCartScreen.dart';
+import 'package:ekirana_user_flutter/screens/UserProfileScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 class HomeScreen extends StatefulWidget{
@@ -8,6 +11,7 @@ class HomeScreen extends StatefulWidget{
 }
 class _HomeScreen extends State<HomeScreen> {
   int current_index=0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,6 +25,7 @@ class _HomeScreen extends State<HomeScreen> {
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           toolbarHeight: 100,
+          automaticallyImplyLeading: false,
           flexibleSpace: Container(
             color: Colors.green.shade800,
             child: Column(
@@ -142,6 +147,34 @@ class _HomeScreen extends State<HomeScreen> {
                           context,
                           MaterialPageRoute(builder: (context) =>
                               ProductListScreen(
+                                  "Cosmetics",
+                                  Svg('assets/images/cosmetics_icon.svg')
+                              ),
+                          )
+                      );
+                    },
+                    child: Container(
+                      width: 154,
+                      height: 100,
+                      child: const Card(
+                        elevation: 2,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image(image: Svg('assets/images/cosmetics_icon.svg'),width: 34,height: 34),
+                            Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.w600 ), textAlign: TextAlign.center,),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 8,),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>
+                              ProductListScreen(
                                   "Others",
                                   Svg('assets/images/others_icon.svg')
                               ),
@@ -159,35 +192,6 @@ class _HomeScreen extends State<HomeScreen> {
                             Image(image: Svg('assets/images/others_icon.svg'),width: 36,height: 36),
                             SizedBox(height: 8,),
                             Text("Others",style: TextStyle(fontWeight: FontWeight.w600)),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 8,),
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) =>
-                              ProductListScreen(
-                                  "Interior Design",
-                                  Svg('assets/images/interior_design_icon.svg')
-                              ),
-                          )
-                      );
-                    },
-                    child: Container(
-                      width: 154,
-                      height: 100,
-                      child: const Card(
-                        elevation: 2,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image(image: Svg('assets/images/interior_design_icon.svg'),width: 36,height: 36),
-                            SizedBox(height: 8,),
-                            Text("Interior Design",style: TextStyle(fontWeight: FontWeight.w600),),
                           ],
                         ),
                       ),
@@ -262,8 +266,8 @@ class _HomeScreen extends State<HomeScreen> {
                           context,
                           MaterialPageRoute(builder: (context) =>
                               ProductListScreen(
-                                  "Cosmetics",
-                                  Svg('assets/images/cosmetics_icon.svg')
+                                  "Interior Design",
+                                  Svg('assets/images/interior_design_icon.svg')
                               ),
                           )
                       );
@@ -276,8 +280,9 @@ class _HomeScreen extends State<HomeScreen> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: Svg('assets/images/cosmetics_icon.svg'),width: 34,height: 34),
-                            Text("Cosmetics & Personal Care",style: TextStyle(fontWeight: FontWeight.w600 ), textAlign: TextAlign.center,),
+                            Image(image: Svg('assets/images/interior_design_icon.svg'),width: 36,height: 36),
+                            SizedBox(height: 8,),
+                            Text("Interior Design",style: TextStyle(fontWeight: FontWeight.w600),),
                           ],
                         ),
                       ),
@@ -288,40 +293,6 @@ class _HomeScreen extends State<HomeScreen> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.green.shade800,
-          type: BottomNavigationBarType.fixed,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          currentIndex: current_index,
-          items: const[
-            BottomNavigationBarItem(
-              icon: Image(image: Svg("assets/images/home_icon.svg"),width: 25,height: 25,),
-              label: "",
-              activeIcon: Image(image: Svg("assets/images/home_icon.svg"),width: 25,height: 25,color: Colors.orange,)
-            ),
-            BottomNavigationBarItem(
-              icon: Image(image: Svg("assets/images/bag_icon.svg"),width: 25,height: 25,),
-              label: "",
-              activeIcon: Image(image: Svg("assets/images/bag_icon.svg"),width: 25,height: 25,color: Colors.orange,)
-            ),
-            BottomNavigationBarItem(
-              icon: Image(image: Svg("assets/images/list_icon.svg"),width: 25,height: 25,),
-              label: "",
-              activeIcon: Image(image: Svg("assets/images/list_icon.svg"),width: 25,height: 25,color: Colors.orange,)
-            ),
-            BottomNavigationBarItem(
-              icon: Image(image: Svg("assets/images/account_icon.svg"),width: 25,height: 25,),
-              label: "",
-              activeIcon: Image(image: Svg("assets/images/account_icon.svg"),width: 25,height: 25,color: Colors.orange,)
-            )
-          ],
-          onTap: (index){
-            setState((){
-              current_index=index;
-            });
-          },
-        )
       ),
     );
   }
