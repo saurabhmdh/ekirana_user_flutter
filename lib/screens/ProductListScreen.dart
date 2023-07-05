@@ -110,11 +110,11 @@ class _ProductListScreen extends State<ProductListScreen> {
                                   child: Image(image: NetworkImage(demoList[index]['item_image']),width: 143,height: 143,),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8,right: 8,top: 4),
+                                  padding: EdgeInsets.only(left: 8,right: 8,top: 8),
                                   child: Text(demoList[index]['item_name'],style: TextStyle(fontWeight: FontWeight.w600,color: Colors.black, fontSize: 14),textAlign: TextAlign.center,)
                                 ),
                                 Padding(
-                                    padding: EdgeInsets.only(left: 8,right: 8,top: 4),
+                                    padding: EdgeInsets.only(left: 8,right: 8,top: 8),
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
@@ -144,7 +144,12 @@ class _ProductListScreen extends State<ProductListScreen> {
               ),
             ],
           ),
-      ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          elevation: 8,
+          child: Image(image: AssetImage('assets/images/floating_cart.png'),width: 70,height: 70,),
+        ),
+      )
     );
   }
 }
