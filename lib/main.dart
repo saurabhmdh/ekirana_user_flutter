@@ -15,7 +15,7 @@ class EkiranaApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        '/': (context) => BottomNavigationFile(),
+        '/': (context) => BottomNavigationFile(0),
         '/home': (context) => HomeScreen()
       }
     );

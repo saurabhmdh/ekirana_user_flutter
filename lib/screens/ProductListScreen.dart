@@ -1,3 +1,5 @@
+import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
+import 'package:ekirana_user_flutter/screens/ShoppingCartScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'demo_list.dart';
@@ -139,15 +141,21 @@ class _ProductListScreen extends State<ProductListScreen> {
                               ],
                             ),
                           ),
-                  );
-                }),
-              ),
+                        );
+                     }),
+                   ),
             ],
-          ),
+        ),
         floatingActionButton: FloatingActionButton(
-          onPressed: (){},
-          elevation: 8,
-          child: Image(image: AssetImage('assets/images/floating_cart.png'),width: 70,height: 70,),
+                onPressed: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BottomNavigationFile(1)
+                      )
+                  );
+                  },
+               elevation: 8,
+               child: Image(image: AssetImage('assets/images/floating_cart.png'),width: 70,height: 70,),
         ),
       )
     );

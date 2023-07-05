@@ -6,10 +6,11 @@ import 'ShoppingCartScreen.dart';
 import 'UserProfileScreen.dart';
 
 class BottomNavigationFile extends StatefulWidget {
-  const BottomNavigationFile({super.key});
+  int currIndex;
+  BottomNavigationFile(this.currIndex);
 
   @override
-  State<BottomNavigationFile> createState() => _BottomNavigationFileState();
+  State<BottomNavigationFile> createState() => _BottomNavigationFileState(currIndex);
 }
 
 class _BottomNavigationFileState extends State<BottomNavigationFile> {
@@ -20,10 +21,11 @@ class _BottomNavigationFileState extends State<BottomNavigationFile> {
     UserProfile(),
   ];
   int currentIndex=0;
+  _BottomNavigationFileState(this.currentIndex);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentIndex],
+        body: screens[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.green.shade800,
           type: BottomNavigationBarType.fixed,

@@ -37,7 +37,7 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) =>
-                                  BottomNavigationFile()
+                                  BottomNavigationFile(0)
                               )
                           );
                         },
