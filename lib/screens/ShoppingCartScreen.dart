@@ -1,9 +1,7 @@
 import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
+import 'package:ekirana_user_flutter/screens/ConfirmOrderScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
-
-import 'HomeScreen.dart';
 import 'demo_list.dart';
 
 class ShoppingCartScreen extends StatefulWidget {
@@ -58,7 +56,7 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
                           color: Colors.white
-                      ),
+                        ),
                       )
                     ],
                   )
@@ -112,7 +110,7 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
                                         shape: BoxShape.circle,
                                         color: Colors.orange
                                       ),
-                                        child: Text("-",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 14),textAlign: TextAlign.center,)
+                                        child: const Text("-",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 14),textAlign: TextAlign.center,)
                                     ),
                                     SizedBox(width: 5,),
                                     Container(
@@ -123,8 +121,7 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
                                             shape: BoxShape.circle,
                                             color: Colors.orange
                                         ),
-                                        child: Text("1",style: TextStyle(
-                                            color: Colors.white,fontWeight: FontWeight.w600,fontSize: 14),textAlign: TextAlign.center,)
+                                        child: const Text("1",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 14),textAlign: TextAlign.center,)
                                     ),
                                     SizedBox(width: 5,),
                                     Container(
@@ -174,13 +171,23 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
                           borderRadius: BorderRadius.circular(30),
                           color: Colors.orange,
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 18,right: 18,top:0,bottom:0),
-                          child:  Text("Checkout",style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                            fontSize: 14,
-                          ),),
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>
+                                    ConfirmOrderScreen()
+                                )
+                            );
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 18,right: 18,top:0,bottom:0),
+                            child:  Text("Checkout",style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),),
+                          ),
                         ),
                       ),
                     ),
@@ -189,6 +196,6 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
               ),
             ),
         )
-    );
+     );
   }
 }
