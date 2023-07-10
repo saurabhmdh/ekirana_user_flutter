@@ -30,20 +30,33 @@ class _UserProfileState extends State<UserProfile> {
                 children: [
                   Column(
                     children: [
-                      InkWell(
-                        onTap: (){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) =>
-                                  BottomNavigationFile(0)
-                              )
-                          );
-                        },
-                        child: Container(
-                            alignment: Alignment.topLeft,
-                            padding: const EdgeInsets.only(left: 18,top: 42),
-                            child: Icon(Icons.arrow_back,color: Colors.white,)
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          InkWell(
+                            onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) =>
+                                      BottomNavigationFile(0)
+                                  )
+                              );
+                            },
+                            child: Container(
+                                alignment: Alignment.topLeft,
+                                padding: const EdgeInsets.only(left: 18,top: 42),
+                                child: Icon(Icons.arrow_back,color: Colors.white,)
+                            ),
+                          ),
+                          InkWell(
+                            onTap: (){},
+                            child: Container(
+                                alignment: Alignment.topLeft,
+                                padding: const EdgeInsets.only(right: 18,top: 42),
+                                child: Image(image: Svg('assets/images/logout_icon.svg'),width: 22,height: 22,)
+                            ),
+                          ),
+                        ],
                       ),
                       const Text(
                         "User Profile",style: TextStyle(
@@ -149,7 +162,7 @@ class _UserProfileState extends State<UserProfile> {
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.orange,
                           ),
-                          padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -165,7 +178,7 @@ class _UserProfileState extends State<UserProfile> {
                               borderRadius: BorderRadius.circular(5),
                               color: Colors.orange,
                             ),
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
                             child: const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -181,7 +194,7 @@ class _UserProfileState extends State<UserProfile> {
                               borderRadius: BorderRadius.circular(5),
                               color: Colors.orange,
                             ),
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
                             child: const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
