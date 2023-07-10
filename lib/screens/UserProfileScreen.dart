@@ -2,8 +2,6 @@ import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
-import 'HomeScreen.dart';
-
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
 
@@ -156,7 +154,7 @@ class _UserProfileState extends State<UserProfile> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Add New Address",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                              Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                              Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
                             ],
                           )
 
@@ -172,7 +170,7 @@ class _UserProfileState extends State<UserProfile> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text("My Orders",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                                Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                                Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
                               ],
                             )
 
@@ -188,7 +186,7 @@ class _UserProfileState extends State<UserProfile> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text("Customer Support",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                                Icon(Icons.arrow_forward_ios,color: Colors.white)
+                                Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
                               ],
                             )
 
