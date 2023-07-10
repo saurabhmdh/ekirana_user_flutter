@@ -60,6 +60,146 @@ class _UserProfileState extends State<UserProfile> {
               ),
             ),
           ),
+          body: SingleChildScrollView(
+            child: Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(8),
+              child: Card(
+                elevation: 4,
+                margin: EdgeInsets.all(8),
+                child: Container(
+                  padding: EdgeInsets.all(16),
+                  child: Column(
+                      children: [
+                        Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: const Color(0xff7c94b6),
+                            image: DecorationImage(
+                              image: NetworkImage('http://i.imgur.com/QSev0hg.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all( Radius.circular(50.0)),
+                            border: Border.all(
+                              color: Colors.orange,
+                              width: 1.0,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 8,),
+                        Text("John Doe",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),),
+                        Text("Edit Profile", style: TextStyle(color: Colors.green.shade800, decoration: TextDecoration.underline),),
+                        SizedBox(height: 16,),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(width: 8,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Phone Number",style: TextStyle(fontWeight: FontWeight.w600)),
+                                Text("123 456 7890"),
+                              ],
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 16,),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(width: 8,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Email",style: TextStyle(fontWeight: FontWeight.w600)),
+                                Text("info@gmail.com"),
+                              ],
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 16,),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(width: 8,),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Address",style: TextStyle(fontWeight: FontWeight.w600)),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(child: Text("Saurabh Android, 9740516004, hamirpur210507",overflow: TextOverflow.ellipsis,maxLines: 2,softWrap: false,),
+
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 16,),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Colors.orange,
+                          ),
+                          padding: EdgeInsets.all(12),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Add New Address",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                              Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                            ],
+                          )
+
+                        ),
+                        SizedBox(height: 8,),
+                        Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.orange,
+                            ),
+                            padding: EdgeInsets.all(12),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("My Orders",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                                Icon(Icons.arrow_forward_ios,color: Colors.white,)
+                              ],
+                            )
+
+                        ),
+                        SizedBox(height: 8,),
+                        Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.orange,
+                            ),
+                            padding: EdgeInsets.all(12),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Customer Support",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                                Icon(Icons.arrow_forward_ios,color: Colors.white)
+                              ],
+                            )
+
+                        ),
+                        SizedBox(height: 16,),
+                      ],
+                  ),
+                ),
+              ),
+            ),
+          ),
         )
     );
   }
