@@ -1,3 +1,4 @@
+import 'package:ekirana_user_flutter/screens/OrderScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
@@ -77,7 +78,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                                 padding: const EdgeInsets.only(right: 8,top: 4),
                                 child: Image(image: Svg('assets/images/location_icon.svg'),width: 18,height: 18,color: Colors.green.shade800,alignment: Alignment.topLeft,),
                               ),
-                              Expanded(child: Text("Saurabh Android, 9740516004, hamirpur210507",overflow: TextOverflow.ellipsis,maxLines: 2,)),
+                              Expanded(child: Text("Saurabh Android, 9740516004, hamirpur210507",overflow: TextOverflow.ellipsis,maxLines: 2,style: TextStyle(color: Colors.grey.shade600))),
                             ],
                           ),
                           SizedBox(height: 16,),
@@ -232,13 +233,18 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                     ),
                   ),
                   SizedBox(height: 16,),
-                  Container(
-                    padding: EdgeInsets.only(top: 10,bottom: 10,left: 20,right: 20),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.orange
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => OrderScreen()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(top: 10,bottom: 10,left: 20,right: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.orange
+                      ),
+                      child: Text("Pay Now",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,),textDirection: TextDirection.ltr,),
                     ),
-                    child: Text("Pay Now",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,),textDirection: TextDirection.ltr,),
                   )
                 ],
               ),

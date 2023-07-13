@@ -8,6 +8,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "badges",
+      "rootUri": "file:///Users/samridhi/.pub-cache/hosted/pub.dev/badges-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///Users/samridhi/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -206,7 +212,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-07-04T15:08:47.036310Z",
+  "generated": "2023-07-10T16:21:37.772030Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }
