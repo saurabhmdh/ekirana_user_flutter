@@ -1,4 +1,5 @@
 import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
+import 'package:ekirana_user_flutter/screens/TrackOrderScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
@@ -127,7 +128,7 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
                       children: [
                         InkWell(
                           onTap: (){
-
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => TrackOrderScreen()));
                           },
                             child: Text("Track",style: TextStyle(fontWeight: FontWeight.w600,color: Colors.green.shade800),)
                         ),
@@ -136,7 +137,6 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
                   ],
                 ),
               ),
-
             );
           }),
         )
