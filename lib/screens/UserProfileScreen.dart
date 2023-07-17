@@ -1,4 +1,5 @@
 import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
+import 'package:ekirana_user_flutter/screens/SavedAddressesScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
@@ -157,20 +158,30 @@ class _UserProfileState extends State<UserProfile> {
                           ],
                         ),
                         SizedBox(height: 16,),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.orange,
-                          ),
-                            padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("Add New Address",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                              Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
-                            ],
-                          )
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>
+                                    SavedAddressesScreen()
+                                )
+                            );
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.orange,
+                            ),
+                              padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Saved Addresses",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                                Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
+                              ],
+                            )
 
+                          ),
                         ),
                         SizedBox(height: 8,),
                         Container(
