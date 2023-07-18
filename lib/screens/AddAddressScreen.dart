@@ -40,7 +40,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
                         ),
                       ),
                       const Text(
-                        "Saved Addresses",style: TextStyle(
+                        "Add New Address",style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
                           color: Colors.white

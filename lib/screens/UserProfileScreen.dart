@@ -1,5 +1,6 @@
 import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
 import 'package:ekirana_user_flutter/screens/EditProfileScreen.dart';
+import 'package:ekirana_user_flutter/screens/OrderHistoryScreen.dart';
 import 'package:ekirana_user_flutter/screens/SavedAddressesScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
@@ -194,20 +195,25 @@ class _UserProfileState extends State<UserProfile> {
                           ),
                         ),
                         SizedBox(height: 8,),
-                        Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              color: Colors.orange,
-                            ),
-                            padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("My Orders",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
-                                Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
-                              ],
-                            )
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => OrderHistoryScreen()));
+                          },
+                          child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Colors.orange,
+                              ),
+                              padding: EdgeInsets.only(left: 24,top: 12,bottom: 12,right: 12),
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("My Orders",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),),
+                                  Image(image: Svg('assets/images/arrow_vector.svg'),width: 18,height: 28)
+                                ],
+                              )
 
+                          ),
                         ),
                         SizedBox(height: 8,),
                         Container(
