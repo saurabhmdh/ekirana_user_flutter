@@ -40,7 +40,7 @@ class _OrderScreenState extends State<OrderScreen> {
                         ),
                       ),
                       const Text(
-                        "Order Confirm",style: TextStyle(
+                        "Order",style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
                           color: Colors.white

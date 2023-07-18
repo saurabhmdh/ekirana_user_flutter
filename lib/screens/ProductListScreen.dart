@@ -1,5 +1,5 @@
 import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
-import 'package:ekirana_user_flutter/screens/ShoppingCartScreen.dart';
+import 'package:ekirana_user_flutter/screens/ProductDetailScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'demo_list.dart';
@@ -109,7 +109,15 @@ class _ProductListScreen extends State<ProductListScreen> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.all(6.0),
-                                  child: Image(image: NetworkImage(demoList[index]['item_image']),width: 143,height: 143,),
+                                  child: InkWell(
+                                    onTap: (){
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => ProductDetailScreen(index)
+                                          )
+                                      );
+                                    },
+                                      child: Image(image: NetworkImage(demoList[index]['item_image']),width: 143,height: 143,)),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 8,right: 8,top: 8),

@@ -1,4 +1,5 @@
 import 'package:ekirana_user_flutter/screens/OrderScreen.dart';
+import 'package:ekirana_user_flutter/screens/SavedAddressesScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
@@ -82,10 +83,14 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                             ],
                           ),
                           SizedBox(height: 16,),
-                          const Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              Text("Change Address",textAlign: TextAlign.right,style: TextStyle(fontWeight: FontWeight.w600,color: Colors.orange,decoration: TextDecoration.underline),),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => SavedAddressesScreen()));
+                                  },
+                                  child: Text("Change Address",textAlign: TextAlign.right,style: TextStyle(fontWeight: FontWeight.w600,color: Colors.orange,decoration: TextDecoration.underline),)),
                             ],
                           )
                         ],
