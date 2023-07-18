@@ -1,4 +1,5 @@
 import 'package:ekirana_user_flutter/screens/BottomNavigationFile.dart';
+import 'package:ekirana_user_flutter/screens/EditProfileScreen.dart';
 import 'package:ekirana_user_flutter/screens/SavedAddressesScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
@@ -101,7 +102,16 @@ class _UserProfileState extends State<UserProfile> {
                         ),
                         SizedBox(height: 8,),
                         Text("John Doe",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),),
-                        Text("Edit Profile", style: TextStyle(color: Colors.green.shade800, decoration: TextDecoration.underline),),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>
+                                    EditProfileScreen()
+                                )
+                            );
+                          },
+                            child: Text("Edit Profile", style: TextStyle(color: Colors.green.shade800, decoration: TextDecoration.underline),)),
                         SizedBox(height: 16,),
                         const Row(
                           mainAxisAlignment: MainAxisAlignment.start,
