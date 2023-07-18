@@ -1,3 +1,4 @@
+import 'package:ekirana_user_flutter/screens/AddAddressScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 
@@ -54,16 +55,26 @@ class _SavedAddressesScreenState extends State<SavedAddressesScreen> {
           ),
           body: Column(
             children: [
-              Container(
-                width: double.infinity,
-                margin: EdgeInsets.all(16),
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.orange
-                ),
-                child: Text("+ ADD NEW ADDRESS",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),
-                ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>
+                          AddAddressScreen()
+                      )
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.orange
+                  ),
+                  child: Text("+ ADD NEW ADDRESS",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600),textAlign: TextAlign.center,),
+                  ),
+              ),
               Expanded(
                 child: Container(
                   child: ListView.builder(
@@ -111,9 +122,9 @@ class _SavedAddressesScreenState extends State<SavedAddressesScreen> {
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Image(image: Svg('assets/images/edit_address_icon.svg'),width: 36,height: 36,),
+                                Image(image: AssetImage('assets/images/edit_address_icon.png'),width: 36,height: 36,),
                                 SizedBox(width: 8,),
-                                Image(image: Svg('assets/images/delete_address_icon.svg'),width: 36,height: 36,),
+                                Image(image: AssetImage('assets/images/delete_address_icon.png'),width: 36,height: 36,),
                                 SizedBox(width: 16,)
                               ],
                             )
